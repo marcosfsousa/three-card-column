@@ -81,7 +81,7 @@ button {
 }
 
 .card-container {
-    margin: 70px 20px 70px;
+    margin: 70px auto;
     border-radius: 50px;
     max-width: 375px;
 }
@@ -96,11 +96,17 @@ button:active {
     color: var(--transparentwhite);
 }
 
+@media screen and (min-width: 768px) {
+    .card-container {
+        margin-left: 31vw;
+    }
+}
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
     .card-container {
         display: flex;                
-        margin: 200px 200px 200px 25%;
+        margin: 200px 200px 100px;
+        margin-left: 3.125em;
     }
 
     .box-sedan, .box-suv, .box-luxury {
@@ -124,3 +130,9 @@ button:active {
         padding: 15px 30px;
     }
 }   
+
+@media screen and (min-width: 1440px) {
+    .card-container {
+        margin-left: 25%;
+    }
+}
