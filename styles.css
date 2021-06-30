@@ -1,0 +1,126 @@
+:root {
+    --brightorange: hsl(31, 77%, 52%);
+    --darkcyan: hsl(184, 100%, 22%);
+    --verydarkcyan: hsl(179, 100%, 13%);
+    --transparentwhite: hsla(0, 0%, 100%, 0.75);
+    --verylightgray: hsl(0, 0%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.primary-sedan {
+    background-color: var(--brightorange);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.primary-suv {
+    background-color: var(--darkcyan);
+}
+
+.primary-luxury{
+    background-color: var(--verydarkcyan);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+body {
+    font-size: 15px;
+    background-color: var(--verylightgray);    
+}
+
+.box-sedan, .box-suv, .box-luxury {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 50px 30px;
+    
+}
+
+h1 {
+    color: var(--verylightgray);
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', sans-serif;    
+    font-weight: 700;
+    padding: 17.5px 0px;
+    margin-top: 10px;
+}
+
+p {
+    color: var(--transparentwhite);
+    font-family: 'Lexend Deca', cursive;
+    line-height: 1.5rem;
+    font-weight: 400;
+    padding: 15px 0px;
+}
+
+button {
+    background-color: var(--verylightgray);        
+    font-family: 'Lexend Deca', cursive;
+    border-radius: 25px;
+    font-weight: 400;
+    padding: 10px 15px;
+    margin: 10px 20px 15px 0px;
+    border: none;
+}
+
+.button-sedan, .button-sedan:active {
+    color: var(--brightorange);
+}
+
+.button-suv, .button-suv:active {
+    color: var(--darkcyan);
+}
+
+.button-luxury, .button-luxury:active {
+    color: var(--verydarkcyan);
+}
+
+.card-container {
+    margin: 70px 20px 70px;
+    border-radius: 50px;
+    max-width: 375px;
+}
+
+button:active {
+    cursor: pointer;
+    background-color:transparent;    
+    border: 1px solid var(--transparentwhite);
+}
+
+.button-sedan:active, .button-suv:active, .button-luxury:active {
+    color: var(--transparentwhite);
+}
+
+
+@media screen and (min-width: 1440px) {
+    .card-container {
+        display: flex;                
+        margin: 200px 200px 200px 25%;
+    }
+
+    .box-sedan, .box-suv, .box-luxury {
+        min-width: 309px;
+        padding-top: 50px;
+    }
+
+    .primary-sedan {        
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0px;
+        
+    }
+
+    .primary-luxury {
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 10px;
+    }
+
+    button {
+        margin-top: 80px;
+        padding: 15px 30px;
+    }
+}   
